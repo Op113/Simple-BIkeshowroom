@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bike Models - Partner's Bike Showroom</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      color: #ffcc00;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+  header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+header h1 img {
+  display: inline-block;
+}
+
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1e1e1e;
+      padding: 12px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .models {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .model {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .model img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .model-details {
+      flex: 1;
+    }
+
+    .model-details h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .model-details ul {
+      padding-left: 20px;
+    }
+
+    .model-details p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .model-details button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .model-details button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><img src="logo.png"></h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>   
+    </ul>
+  </nav>
+
+  <div class="models">
+
+    <div class="model">
+      <img src="ninjah2r.avif" alt="Yamaha R15 V4">
+      <div class="model-details">
+        <h2>Ninja H2R</h2>
+        <ul>
+          <li>998cc Engine</li>
+          <li>0-100 speed 2.03-3 sec</li>
+          <li>Power305.75 bhp @ 14000 rpm</li>
+          <li> Top Speed 400kmph</li>
+        </ul>
+        <p>Price: Rs. 79,90,000</p>
+        <button onclick="location.href='ninjabooking.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <img src="mt15.jpg" alt="MT 15">
+      <div class="model-details">
+        <h2>MT 15</h2>
+        <ul>
+          <li>155cc Engine</li>
+          <li>6-Speed Gearbox</li>
+          <li>Dual Channel ABS</li>
+          <li>Top Speed 140kmph</li>
+        </ul>
+        <p>Price: Rs. 1,70,000</p>
+        <button onclick="location.href='mt15booking.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <img src="r15.webp" alt="r15">
+      <div class="model-details">
+        <h2>R15</h2>
+        <ul>
+          <li>155cc Engine</li>
+          <li>6-Speed Gearbox</li>
+          <li>Max Power 18.1 bhp @ 10000 rpm</li>
+          <li>Top Speed 140kmph</li>
+        </ul>
+        <p>Price: Rs. 1,70,000</p>
+        <button onclick="location.href='r15booking.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <img src="yamaha.webp" alt="Yamaha R15 V4">
+      <div class="model-details">
+        <h2>Yamaha R15 V4</h2>
+        <ul>
+          <li>155cc Liquid-cooled Engine</li>
+          <li>6-Speed Gearbox</li>
+          <li>Dual Channel ABS</li>
+          <li>LED Headlights & Digital Cluster</li>
+        </ul>
+        <p>Price: Rs. 1,85,000</p>
+        <button onclick="location.href='yamahar15booking.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <img src="Royal350.avif" alt="Royal Enfield Classic 350">
+      <div class="model-details">
+        <h2>Royal Enfield Classic 350</h2>
+        <ul>
+          <li>349cc Air-Oil Cooled Engine</li>
+          <li>5-Speed Transmission</li>
+          <li>Retro Looks with Modern Tech</li>
+          <li>ABS & Dual Disc Brakes</li>
+        </ul>
+        <p>Price: Rs. 2,10,000</p>
+        <button onclick="location.href='royalenfieldbooking.html'">Book Now</button>
+      </div>
+    </div>
+
+    <div class="model">
+      <img src="ktm200.avif" alt="KTM Duke 200">
+      <div class="model-details">
+        <h2>KTM Duke 200</h2>
+        <ul>
+          <li>199.5cc Single-Cylinder Engine</li>
+          <li>Sharp Styling and Lightweight</li>
+          <li>Dual-channel ABS</li>
+          <li>Digital Console & Alloy Wheels</li>
+        </ul>
+        <p>Price: Rs. 1,96,000</p>
+        <button onclick="location.href='ktmbooking.html'">Book Now</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Partner's Bike Showroom. All rights reserved.
+  </footer>
+
+</body>
+</html>

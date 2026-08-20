@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffc14d;
+    padding-right: 20%;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffe6e6;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #cc0000;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#menu {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5533d;
+}
+
+.navbar {
+    display: flex; /* This makes the items line up horizontally */
+    gap: 30px;     /* Adds space between the items */
+    background-color: #f8f8f8;
+    padding: 20px; /* Optional: center the items */
+}
+.section{
+    text-align:left;
+}

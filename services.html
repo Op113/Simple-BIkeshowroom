@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Showroom Services</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #1e1e1e;
+  color: #ffcc00;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header h1 { margin: 0; text-align: center; }
+header h1 img { max-height: 60px; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #1e1e1e;
+  padding: 12px 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover { text-decoration: underline; }
+
+.services {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service-item {
+  background: #eee;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+
+.contact-form {
+  padding: 40px;
+  background-color: #e0e0e0;
+}
+
+.contact-form form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form select,
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.contact-form button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1><img src="logo.png"></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="models.html">Models</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>   
+      </ul>
+    </nav>
+</header>
+
+<section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-list">
+        <div class="service-item">
+            <h3>Bike Sales</h3>
+            <p>We offer a wide range of new and used bikes from top brands.</p>
+        </div>
+        <div class="service-item">
+            <h3>Bike Servicing</h3>
+            <p>Expert technicians provide regular maintenance and repairs.</p>
+        </div>
+        <div class="service-item">
+            <h3>Custom Modifications</h3>
+            <p>We offer accessories and performance upgrades.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-form">
+    <h2 style="text-align:center;">Book a Service</h2>
+
+    <form id="serviceForm">
+        <label>Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label>Bike Model:</label>
+        <select id="bike" required>
+            <option value="">-- Select Model --</option>
+            <option value="Ninja H2R">Ninja H2R</option>
+            <option value="MT15">MT15</option>
+            <option value="R15">R15</option>
+            <option value="Yamaha R15 V4">Yamaha R15 V4</option>
+            <option value="Royal Enfield Classic 350">Royal Enfield Classic 350</option>
+            <option value="KTM Duke 200">KTM Duke 200</option>
+        </select>
+
+        <label>Service Type:</label>
+        <select id="service-type" required>
+            <option value="General Service">General Service</option>
+            <option value="Engine Check">Engine Check</option>
+            <option value="Oil Change">Oil Change</option>
+            <option value="Custom Work">Custom Work</option>
+        </select>
+
+        <label>Preferred Date:</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="confirmationMessage"
+       style="display:none; color:green; font-weight:bold; text-align:center; margin-top:20px;">
+       Service Booking Saved Successfully!
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Partner's Bike Showroom</p>
+</footer>
+
+<script src="db.js"></script>
+<script>
+const form = document.getElementById("serviceForm");
+const confirmation = document.getElementById("confirmationMessage");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const service = {
+        name: document.getElementById("name").value,
+        bike: document.getElementById("bike").value,
+        type: document.getElementById("service-type").value,
+        date: document.getElementById("date").value,
+        time: new Date().toLocaleString()
+    };
+
+    saveService(service);  // <-- Save database
+
+    confirmation.style.display = "block";
+    alert("Your service booking is saved!");
+    form.reset();
+});
+</script>
+
+</body>
+</html>
